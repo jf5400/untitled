@@ -1,7 +1,7 @@
-public class HorseRunner {
+public class HorseBarnRunner {
     public static void main(String[] args){
         Horse horse1 = new Mustang("Secretariat", 12000);
-        Horse horse2 = new Mustang("Dusty Trial", 12500);
+        Horse horse2 = new Mustang("Dusty Trail", 12500);
         Horse horse3 = new Mustang("Silver", 12050);
 
         Horse[] horses = new Horse[6];
@@ -11,11 +11,11 @@ public class HorseRunner {
         HorseBarn barn = new HorseBarn(horses);
 
         System.out.println(barn);
-        System.out.println();
+        System.out.println("Dusty Trail is in space: "+barn.findHorseSpace("Dusty Trail"));
 
-        barn.consolidate(0);
+        barn.consolidate();
 
         System.out.println(barn);
-        System.out.println();
+        System.out.println("Dusty Trail is now in space: "+barn.findHorseSpace("Dusty Trail"));
     }
 }
