@@ -28,4 +28,16 @@ public class HorseBarn{
             }
         }
     }
+    public String toString(){
+        String order="";
+        for(int i=0; i<spaces.length; i++){
+            if(spaces[i]==null){
+                order+= "["+ null +"] ";
+            }
+            else{
+                order+= "["+spaces[i].getName()+"] ";
+            }
+        }
+        return order;
+    }
 }
